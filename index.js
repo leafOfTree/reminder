@@ -11,9 +11,11 @@ function notify() {
   if (Notification.permission !== 'granted') {
     Notification.requestPermission()
   } else {
-    new Notification('Reminder', {
-      body: 'Hey, please take a break'
+    const n = new Notification('⌛ Reminder', {
+      body: 'Hey, please take a break', 
+      icon: './demo.jpg', 
     })
+
   }
 }
 
