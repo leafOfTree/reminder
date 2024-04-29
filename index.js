@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-function notify() {
+function notify(hours) {
+  fetch('www.example.com')
   if (Notification.permission !== 'granted') {
     Notification.requestPermission()
   } else {
-    const n = new Notification('⌛ Reminder', {
-      body: 'Hey, please take a break', 
+    const n = new Notification('网页提醒工具', {
+      body: '休息一下', 
       icon: './demo.jpg', 
     })
 
@@ -23,7 +24,7 @@ setInterval(() => {
   const now = new Date()
   const hours = now.getHours()
   const mins = now.getMinutes()
-  if (hours > 9 && hours < 20 && mins === 59) {
-    notify()
+  if (hours > 9 && hours < 22 && mins === 50) {
+    notify(hours)
   }
 }, 1000*60)
