@@ -14,7 +14,7 @@ function notify(hours) {
   } else {
     const n = new Notification('网页提醒工具', {
       body: '休息一下', 
-      icon: './demo.jpg', 
+      icon: './icon.svg', 
     })
 
   }
