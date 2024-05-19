@@ -24,7 +24,7 @@ setInterval(() => {
   const now = new Date()
   const hours = now.getHours()
   const mins = now.getMinutes()
-  if (hours > 9 && hours < 22 && mins === 50) {
+  if (hours > 9 && hours < 22 && mins === 59) {
     notify(hours)
   }
 }, 1000*60)
